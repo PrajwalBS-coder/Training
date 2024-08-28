@@ -1,0 +1,96 @@
+APACHE KAFKA 
+
+MEANING - DISTRIBUTING STREMING PLATFORM
+
+	1. Crate Real Time Streams    --- Info, Data, Audio, Vidio etc.... 1+1
+	2. Processing the realtime data Streams  ---  2
+	
+Electricity Meter / Calculator
+
+
+Benifits of KAFKA:
+	1. Realiablity  -- DISTRIBUTED, PARTITIONED, FAULT TOLERANCE. -- FAULT 
+	2. Scalability
+	3. Duarablity
+	4. Performance
+	
+	
+Diffrent Aspects of KAFKA
+	1. PRODUCER 
+	2. SUBSCRIBERS
+	3. BROKER - KAFKA CLUSTERS - MULTIPLE SERVER - MULTIPLE REQUEST AND RESPONSE
+	4. TOPIC - When Ever the producer produce the data. 
+	5. PARTITIONs in Topic - We make diffrent Partions to handel Arbitrary Data
+	6. PARTIOTION OFFSET - We Send Single Line or Some Data from Partions
+	7. LEADER - A Node that writes the data
+	8. Follower - A Node that follows the Leader
+	
+	
+Notes for Installatio:
+	1. Apache kafka - QuickStart Link
+	2. Download - https://dlcdn.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz
+	3. Extarct in any Directory :- mkae sure that your diretory name Doesn't have the spaces
+	Reaseon: It is a barrier!
+	4. Rename the Extracted File name as kafak. 
+	5. Go to your kafka Directory Search Bar Click on it and rename it By - CMD
+	6. FILE EXPLORER CMD - Start Zookeeper Server - .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+	7. FILE EXPLORER CMD - Strat your KAFKA Server - .\bin\windows\kafka-server-start.bat .\config\server.properties
+	// Note: make sure you got a port number starting creating server -  PLAINTEXT://HA-LEN-TNKPD-197:9092,
+	8. FILE EXPLORER CMD - Create a topic - .\bin\windows\kafka-topics.bat --create --topic natxis-example --bootstrap-server localhost:9092
+	9. Start the producer and produce the data - .\bin\windows\kafka-console-producer.bat --topic natxis-example --bootstrap-server localhost:9092
+		>paid 1000 as Maintenance
+		>33% temprature
+		>rainy
+		>humidity 10
+		>hello world
+		>test
+		>demo1
+		>demo2
+		>Power Maz
+		>Ajanta
+		>Realme
+		>lenevo
+		>National flag
+		>WebCam
+		>POCO
+		>Atomberg
+		>table
+		>Terminate batch job (Y/N)? y  --//Press CTRL-C --> terminate your job
+		
+	10. Start the Consumer to retrive the data - 
+		Note:- .\bin\windows\kafka-console-consumer.bat --topic natxis --from-beginning --bootstrap-server localhost:9092
+			Processed a total of 0 messages
+			Terminate batch job (Y/N)? y
+			
+			:- Reason You have to specify which kind of data do you need. Sol: --from-beginning
+	
+	upadete Cmd:- .\bin\windows\kafka-console-consumer.bat --topic natxis-example --from-beginning --bootstrap-server localhost:9092
+	
+	
+	11. Creating partition in TOPICS:
+		.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+		
+	12. When you want to create a new topic with 2 Partitions and 3 Replication Factors, you can execute the command, as given below:-
+		.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 3 --partitions 2 --topic test
+	
+	13. Retrive as offset/Middle: 
+		.\bin\windows\kafka-console-consumer.bat --topic natxis-example --bootstrap-server  localhost:9092 --offset 100 --from-beginning
+	
+	14. Retrive as Partion:
+		.\bin\windows\kafka-console-consumer.bat --topic natxis-example --bootstrap-server localhost:9092 	--partition 1
+		
+	15. Retrive as Partion and offset:
+		.\bin\windows\kafka-console-consumer.bat --topic natxis-example --bootstrap-server localhost:9092 --partition 1 --offset 100
+
+
+
+
+	
+	
+	
+	
+	
+
+
+
+

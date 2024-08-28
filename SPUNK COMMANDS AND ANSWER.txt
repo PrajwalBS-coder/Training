@@ -1,0 +1,16 @@
+for retriving top 3
+source="Flipkart_India.csv" host="DESKTOP-OUC8S5A" sourcetype="csv" | head 3
+
+Average of discount from flipkart_india
+source="Flipkart_India.csv" host="DESKTOP-OUC8S5A" sourcetype="csv" | stats avg(Discount)
+
+
+Distinct valyes
+source="Flipkart_India.csv" host="DESKTOP-OUC8S5A" sourcetype="csv" | stats distinct_count(Discount)
+
+
+Search
+source="Flipkart_India.csv" host="DESKTOP-OUC8S5A" sourcetype="csv" | search City="Bangalore"
+
+min,max,avg of sales
+source="Flipkart_India.csv" host="DESKTOP-OUC8S5A" sourcetype="csv" | stats min(Sales),max(Sales),avg(Sales)

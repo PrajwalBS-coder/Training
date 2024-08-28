@@ -1,0 +1,77 @@
+5 answeerr
+SELECT `Product Category`,MAX(`Shipping Cost`) AS highPrice,
+        MIN(`Shipping Cost`) AS lowPrice
+FROM flipkart_india group by `Product Category`;
+
+7 ANswer 
+
+select sum(`Discount`) as 'Sum Disc',sum(`Shipping Cost`) As 'Sum Ship' from flipkart_india group by `Region`;
+
+
+8 Ans
+select sum(`Sales`) As 'Sum of Sales' from flipkart_india;
+
+
+9 Ans
+SELECT `Customer name`
+FROM flipkart_india
+WHERE LEFT(`Customer name`, 1) IN ('a','e','i','o','u')
+
+10 Ans
+
+select * from flipkart_india where `customer name` like '_r%' and `customer name` like '_s%' ;
+
+
+Ans 21
+SELECT  `Customer name`, ROUND(`Sales`,0) AS 'Sales' FROM flipkart_india;
+
+
+ANs 22
+
+select * from flipkart_india where `State or Province` like '_m%' and `City` like '_n%' ;
+
+Ans 24
+select avg(`Sales`) from flipkart_india group by `State or Province`;
+
+Ans 23
+
+select avg(`Profit`) from flipkart_india group by `State or Province`;
+
+Ans 25
+
+select `Profit` from flipkart_india where `Profit` <0;
+
+
+ANs 1
+select `Customer name` from flipkart_india order by sales desc limit 5;
+ Ans 2
+select `Customer name`,discount from flipkart_india order by discount asc limit 5;
+select `Customer name`,discount from flipkart_india order by discount desc limit 5;
+Ans 3
+
+select * from flipkart_india where `Customer name` like 'a%' and `ship mode`='Regular Air' and sales between 10 and 150;
+
+Ans 10
+select `Product Name`  from flipkart_india   where `Product Name` like '%r' and `Product Name` like '%s';
+
+Ans 14 
+
+select `State or Province`,sales from flipkart_india order by sales desc limit 3;
+
+Ans 15 
+
+select `City`,discount,sales from flipkart_india order by sales and discount  desc limit 3;
+
+
+ans 11
+
+select `Product Sub-Category` from flipkart_india
+group by `Product Sub-Category`
+having min(`Shipping Cost`) and max(`Discount`);
+
+
+Ans 13
+
+select `Product Name` from flipkart_india
+group by `Product Name`
+having min(`Product Base Margin`) and max(`Product Base Margin`);

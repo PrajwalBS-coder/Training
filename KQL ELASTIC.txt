@@ -1,0 +1,12 @@
+print all origincity where city is new delhi and Destination country code is CA.
+
+
+print all origincity where countrycode is US and Destination country code is IT.
+
+
+DestCountry :"US" and Carrier :"Logstash Airways" 
+
+
+print all carrier name where flighttimemin is between 400 to 1000
+
+Carrier : * and FlightTimeMin > 400 and FlightTimeMin < 1000

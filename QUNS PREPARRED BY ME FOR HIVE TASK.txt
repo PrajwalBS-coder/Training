@@ -1,0 +1,15 @@
+1.count of likes belongs to categeory 10
+2.Name the channel with most dislki and like
+3.count the comment based on category
+4.Name a channel trends between 17.12.11 to 18.02.22
+5count no.of category
+6.Name a title with most likes as well as belongs to category 10.
+7.Which channel holds the Most no of commnent.
+8.Sort the channel based on comment
+9.Sort the title based on likes.
+10.Name a channel with below a averege likes
+11.Name a channel with ternding between 17 t0 22
+12.Display likes based on category
+13.No of like an ddiskles and comment on Emininem channel
+14.Name a chNNEL WITH MOST DISLKIE AND ABOVE AVEREGE COMMNENT.
+15.Name a channel trending most no of days.

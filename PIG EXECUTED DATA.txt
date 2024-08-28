@@ -1,0 +1,80 @@
+1)A = LOAD '/user/cloudera/mydata.txt' using PigStorage(',') as (ID:int,fn:chararray,ln:chararray,no:int,st:chararray);
+dump A;
+Total input paths to process : 1
+(1,Rajiv,Reddy,,Hyderabad)
+(2,siddarth,Battacharya,,Kolkata)
+(3,Rajesh,Khanna,,Delhi)
+(4,Preethi,Agarwal,,Pune)
+(5,Trupthi,Mohanthy,,Bhuwaneshwar)
+(6,Archana,Mishra,,Chennai.)
+
+describe A;
+A: {ID: int,fn: chararray,ln: chararray,no: int,st: chararray}
+
+explain A;
+ast[chararray] - scope-5
+    |   |
+    |   |---Project[bytearray][1] - scope-4
+    |   |
+    |   Cast[chararray] - scope-8
+    |   |
+    |   |---Project[bytearray][2] - scope-7
+    |   |
+    |   Cast[int] - scope-11
+    |   |
+    |   |---Project[bytearray][3] - scope-10
+    |   |
+    |   Cast[chararray] - scope-14
+    |   |
+    |   |---Project[bytearray][4] - scope-
+
+
+illustrate A;
+
+ A     | ID:int    | fn:chararray    | ln:chararray    | no:int     | st:chararray    | 
+----------------------------------------------------------------------------------------
+|       | 005       | Trupthi         | Mohanthy        | 9848022336 | Bhuwaneshwar    | 
+
+
+Group by
+group A by st ;(state)
+dump gd;
+(Pune,{(4,Preethi,Agarwal,,Pune)})
+(Delhi,{(3,Rajesh,Khanna,,Delhi)})
+(Kolkata,{(2,siddarth,Battacharya,,Kolkata)})
+(Chennai.,{(6,Archana,Mishra,,Chennai.)})
+(Hyderabad,{(1,Rajiv,Reddy,,Hyderabad)})
+(Bhuwaneshwar,{(5,Trupthi,Mohanthy,,Bhuwaneshwar)})
+
+gd = group A by ag;//age
+dump gd;
+
+(19,{(4,Preethi,Agarwal,,Pune,19)})
+(20,{(1,Rajiv,Reddy,,Hyderabad,20)})
+(22,{(2,siddarth,Battacharya,,Kolkata,22)})
+(23,{(3,Rajesh,Khanna,,Delhi,23)})
+(24,{(5,Trupthi,Mohanthy,,Bhuwaneshwar,24)})
+(25,{(6,Archana,Mishra,,Chennai,25)})
+
+
+Self Join
+B = LOAD '/user/cloudera/mydata.txt' using PigStorage(',') as (ID:int,fn:chararray,ln:chararray,no:int,st:chararray);
+ji= join A by ID , B by ID;
+
+
+
+
+(1,Rajiv,Reddy,,Hyderabad,20,1,Rajiv,Reddy,,Hyderabad)
+(2,siddarth,Battacharya,,Kolkata,22,2,siddarth,Battacharya,,Kolkata)
+(3,Rajesh,Khanna,,Delhi,23,3,Rajesh,Khanna,,Delhi)
+(4,Preethi,Agarwal,,Pune,19,4,Preethi,Agarwal,,Pune)
+(5,Trupthi,Mohanthy,,Bhuwaneshwar,24,5,Trupthi,Mohanthy,,Bhuwaneshwar)
+(6,Archana,Mishra,,Chennai,25,6,Archana,Mishra,,Chennai)
+
+
+
+Cross Operation
+crss= cross A,B;
+dump crss;
+
+

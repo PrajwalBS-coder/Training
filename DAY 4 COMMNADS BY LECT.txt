@@ -1,0 +1,61 @@
+                   securing Local users and groups:-
+------------------------------
+what is user:- a user account is used to provide security bounderies between different people and programmes
+that run commands.
+
+how to create user:-
+
+useradd user1 (linux)
+adduser user1 (perl script)
+
+when you create user some files will update immediately
+-------------------------------------------------------
+/etc/passwd      :-      store user info
+/etc/shadow      :-      store user credentials
+/etc/group       :-      stored groups info
+/etc/gshadow     :-      stored groups credentials
+
+check user exists or not:- id user_name
+
+how to find out top 10 lines from /etc/passwd :- head /etc/passwd
+    to find top 3 lines from /etc/passwd:- head -3 /etc/passwd
+
+how to find out bottom 3 lines from /etc/passwd:-   tail -3 /etc/passwd
+
+filter patterns inside text file:-
+--------------------------------
+# grep "root" /etc/passwd
+# grep ^"root" /etc/passwd ( will search only line starts with root)
+# grep "bash"$ /etc/passwd ( will search only line ends with bash)
+
+wc command is used for count words,lines and character/bytes ; wc /etc/passwd
+
+pipe ( | ) :- output of 1st command would be the input of second command
+
+# cat /etc/passwd | grep "devops"
+
+how linux identify about default shells and default user policy:-
+----------------------------------------------------------------
+
+file is /etc/default/useradd
+        /etc/login.defs
+
+check useradd different options :-  useradd -u 1005 rahim
+                                    useradd -M SSD
+                                    useradd -r devops
+
+switch between users :- su - username
+
+
+to change user password alternative to passwd :- echo "redhat" | passwd --stdin user_name ( ** redhat is the password )
+
+** to delete a user :-  # userdel -rf user_name
+
+how to lock user profile :- passwd -l username
+                            passwd -u username
+
+
+change user existing password policy using command chage :  ex  chage -m 1 -M 30 -W 5 -l 3 user_name
+        RSEA 
+                            
+

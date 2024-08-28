@@ -1,0 +1,56 @@
+TASK 1
+echo "Eneter file name"
+read fil
+echo "enter the starting line number"
+read s
+echo "enter the ending line number"
+read n
+sed -n $s,$n\p $fil | cat > newline
+cat newline
+
+TASK 2
+ echo "Eneter a word"
+read wrd
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+echo "${bold}$wrd${normal}"
+GREEN='\033[0;32m'
+NOCOLOR='\033[0m'
+RED='\033[0;31m'
+OR='\033[0;3m'
+echo -e " $GREEN $wrd"
+echo -e " $RED $wrd"
+echo -e " $OR $wrd"
+
+
+echo -e '\033[0m'
+echo -e " \033[32;5m $wrd\033[0m"
+ echo -e " \033[5m $wrd\033[0m"
+
+
+TASK 3
+echo enter file name
+read file
+echo enter word
+read word
+echo file before removing $word:
+cat $file
+grep -v -i $word $file > test
+mv test $file
+echo file after removing $word:
+cat $file
+
+TASK 4
+
+echo "Which have Read,Write and Execute permisions. "
+for file in *
+do
+if [ -f $file ]
+then
+if [ -r $file -a -w $file -a -x $file ]
+then
+ls -l $file
+fi
+fi
+done

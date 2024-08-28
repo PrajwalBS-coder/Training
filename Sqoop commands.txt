@@ -1,0 +1,77 @@
+mysqladmin -u root password 'training'
+
+mysql -h localhost -u root -p
+____________________________________________
+Updated 
+
+** open SQL in cloudera
+
+mysql -uroot -pcloudera (nospace between p and cloudera)
+_______________________________________________
+
+mysql> create database sqoop;
+
+mysql> use sqoop;
+
+mysql> create table customer(id varchar(3), name varchar(20), age varchar(3), salary integer(10));
+
+mysql> desc customer;
+
+mysql>INSERT INTO customer (id, name, age, salary)
+VALUES ('1','Tom','30','6000');
+
+mysql> select * from customer;
+
+
+________________________________________________
+
+Sqoop
+
+How to start
+
+sqoop 2   // starting the sqoop from client
+
+set server --host localhost   // checking for server running
+
+_______________________________________________
+
+
+
+
+Let’s Start Sqooping
+
+As you can see, the customer table does not have any primary key. I have added few records in customet table. By default, Sqoop will identify the primary key column (if present) in a table and use it as the splitting column. The low and high values for the splitting column are retrieved from the database, and the map tasks operate on evenly-sized components of the total range.
+
+If the actual values for the primary key are not uniformly distributed across its range, then this can result in unbalanced tasks. You should explicitly choose a different column with the --split-by argument. For example, --split-by id.
+
+Since I want to import this table directly into Hive I am adding –hive-import to my Sqoop command:
+
+************************************
+
+Symbolic link for sqoop configuration
+
+sudo ln -s /etc/hive/conf.dist/hive-site.xml  /etc/spark/conf.dist/hive-site.xml
+
+Command for sqoop opration
+** create same name datavase into hive (Ex: sqoop)
+
+sqoop import --connect jdbc:mysql://localhost:3306/sqoop --username root -P --split-by id --columns id,name --table customer  --target-dir /user/cloudera/ingest/raw/customers --fields-terminated-by "," --hive-import --create-hive-table --hive-table sqoop_workspace.customers
+
+Link : https://dzone.com/articles/sqoop-import-data-from-mysql-to-hive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://dzone.com/articles/sqoop-import-data-from-mysql-to-hive

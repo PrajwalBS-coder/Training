@@ -1,0 +1,98 @@
+show databases;
+use flip;
+CREATE TABLE IF NOT EXISTS Paytm
+(RowID int,
+OrderPriority string,
+Discount DECIMAL,
+UnitPrice DECIMAL,
+ShippingCost DECIMAL,
+CustomerID int,
+CustomerName string,
+ShipMode string)
+COMMENT 'This is paytm table'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+describe paytm;
+
+
+load data inpath '/user/cloudera/Flipkart_India212.csv' overwrite into table paytm;
+select * from paytm;
+
+
+select rowid from paytm;
+
+from paytm;
+
+
+
+https://drive.google.com/file/d/1cxcR6sxLTQ6uSdHOb-lyzV74GBS54Qny/view?usp=share_link
+
+
+
+
+
+show databases;
+use flip;
+CREATE TABLE IF NOT EXISTS Paytm
+(RowID int,
+OrderPriority string,
+Discount DECIMAL,
+UnitPrice DECIMAL,
+ShippingCost DECIMAL,
+CustomerID int,
+CustomerName string,
+ShipMode string)
+COMMENT 'This is paytm table'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+describe paytm;
+
+
+load data inpath '/user/cloudera/Flipkart_India212.csv' overwrite into table paytm;
+select * from paytm;
+
+
+select rowid from paytm;
+
+
+
+
+
+select discount from paytm;
+
+alter table paytm change discount discount decimal(5,2);
+select * from paytm;
+
+
+CREATE TABLE IF NOT EXISTS BookData 
+	 (ISBN STRING, 
+	BookTitle STRING, 
+	 BookAuthor STRING, 
+	 YearOfPublication INT, 
+	 Publisher STRING) 
+	 ROW FORMAT DELIMITED 
+	FIELDS TERMINATED BY '\;' 
+	STORED AS TEXTFILE; LOAD DATA INPATH '/user/cloudera/BX-BooksCorrected.txt' 
+	OVERWRITE INTO TABLE BookData;
+
+
+
+DESCRIBE BookData;
+
+DESCRIBE BookData;
+
+SELECT * from BookData ;	
+SELECT BookData.*
+FROM BookData WHERE YearOfPublication > 0;
+
+
+
+SELECT Publisher, BookAuthor, YearOfPublication, COUNT(BookTitle) FROM BookData 
+GROUP BY Publisher, BookAuthor, YearOfPublication;
+	
+	
+	
+SELECT YearOfPublication, COUNT(BookTitle)  FROM BookData GROUP BY YearOfPublication;
+
+
+
+
+

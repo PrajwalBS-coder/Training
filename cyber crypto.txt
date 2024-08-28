@@ -1,0 +1,64 @@
+BASE64 - ECB
+hM1q+qcS0wGcbW3Zj6xb92Hj+7ARy8O6tgTUnF75A9YmO8nnUxCqMJxOI/ZIjmfp3OivwjG3pMYXHlgZMssdtvOnIGk8U0A+3UP81h1lrN4lTvLEoQFVGu+UdftexRab89Kd01ukKpOWtlU7WHs7ETUwUbbu3l8STe04wPqeYTUR6hS/SZFC1uDEIJQ4bPQKSJpp4Pw9kJ0YERt9b/NKLUGYq0CBSHwhOhyCvEBK18g=
+
+HEXADECIMAL - ECB
+84CD6AFAA712D3019C6D6DD98FAC5BF761E3FBB011CBC3BAB604D49C5EF903D6263BC9E75310AA309C4E23F6488E67E9DCE8AFC231B7A4C6171E581932CB1DB6F3A720693C53403EDD43FCD61D65ACDE254EF2C4A101551AEF9475FB5EC5169BF3D29DD35BA42A9396B6553B587B3B11353051B6EEDE5F124DED38C0FA9E613511EA14BF499142D6E0C42094386CF40A489A69E0FC3D909D18111B7D6FF34A2D4198AB4081487C213A1C82BC404AD7C8
+
+BASE64 - CBC
+hM1q+qcS0wGcbW3Zj6xb91TliPkBBFXf5KWuKvDdKrxeoHJQYxm0f/OC/JZEWx2MvGC4pnbkgmAVwmNi2mjRAhtZs0R05fn13baDseSSRmkO00ink430lEi5enezpYFmK1sdUqLFjj7k7O0LIYpTZDwgVcNkbnzB3llewnVlPHNQQCeWOAMNi6mrIDfMwKvWonkOBmbiS+YCwQkS1uqBdqjyYRPeopgTBSDcKMpv1Fw=
+
+HEXADECIMAL - CBC
+84CD6AFAA712D3019C6D6DD98FAC5BF754E588F9010455DFE4A5AE2AF0DD2ABC5EA072506319B47FF382FC96445B1D8CBC60B8A676E4826015C26362DA68D1021B59B34474E5F9F5DDB683B1E49246690ED348A7938DF49448B97A77B3A581662B5B1D52A2C58E3EE4ECED0B218A53643C2055C3646E7CC1DE595EC275653C735040279638030D8BA9AB2037CCC0ABD6A2790E0666E24BE602C10912D6EA8176A8F26113DEA298130520DC28CA6FD45C
+
+
+
+
+
+
+3rd Session
+
+1. Cryptography
+2. Stegnanography
+3. SQl Injection 
+4. DOS Attack
+
+
+
+Cryptography: Encoding/Decoding  --> Main Point
+		it is method or a practice through which we try to hide our information or data
+		using the code -- > Can be anything   
+			--- > Two friend Prajwal and Adwait has developed no third party will we be able 
+			understand -- > guesture, action, body... 
+
+		Didgital World - Normal Writing : Method by the Reciver, No thrid party.....
+
+
+		:- Diffrent ways Cryptography methods.... 
+
+
+		Classifications of Cryptography:
+		1. Private key Cryptography/Symmetric ---  Same Key is used for Enc And Dec
+		2. Public Key Cryptography/Asymmetric  ---- Two types of Key  --- Currently -- High Security
+								Public and Private --- two keys
+								Public key - Encoding 
+								private key - Decoding  --- Only Wth reciver
+
+	
+		Understnding The Normal/Stndrad process that we in encode and decoding 
+
+
+						Network/Internet 	reciver 
+	Plain Text -- Encoding -- Keys/Pwd  ---- Cipher Text ----- Decoding --- keys  ---- Plain text
+
+					---- Diff types of Cipher---
+		
+	1. Substitution Cipher
+		https://planetcalc.com/7984/#:~:text=A%20tool%20to%20encrypt%2Fdecrypt,want%20to%20tweak%20the%20key.
+
+		ABCDEFG
+		BAD -- Plain text
+		DGA --- Cpher Text
+
+
+
+

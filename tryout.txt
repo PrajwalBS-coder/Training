@@ -1,0 +1,4 @@
+table paytm order by sales limit 5
+into outfile '‪C:\Users\Manish\Desktop\a.txt'
+fields terminated by ','
+lines terminated by '\r\n'

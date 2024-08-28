@@ -1,0 +1,7 @@
+1.Read a file and show it's data.
+2.Use Group by
+3.use union.
+4.use split
+5.use distinct.
+6.use math functions.
+7.

@@ -1,0 +1,78 @@
+1) get-packageprovider
+2) get-alias
+3) get-hotfix
+4) get-date
+5) get-service
+6) get-process
+7) (get-process).gettype()
+8) (get-service).gettype()
+9) getmac
+10) netstat
+11) netstat -s
+
+
+NETSH TASK
+
+1) netsh help
+2) netsh wlan show profile
+3) netsh wlan show profiles PROFILENAME key=clear
+4) netsh interface ipv6 show address
+5) netsh interface ipv6 show interface
+6) netsh interface ipv6 show route
+7) netsh interface ipv4 show address
+8) netsh interface ipv4 show interface
+9) netsh interface ipv4 show route
+10) netsh interface ip show config
+11) netsh advfirewall firewall show rule
+12) netsh winsock show catalog
+13) netsh int ip show addresses
+14) netsh>
+help
+
+
+
+
+
+
+10 mins: Powershell 
+
+1) get-packageprovider
+2) get-alias
+3) get-hotfix
+4) get-date
+5) get-service
+6) get-process
+7) (get-process).gettype()
+8) (get-service).gettype()
+9) getmac
+10) netstat
+11) netstat -s
+
+
+10 mins:
+
+1) netsh help
+2) netsh wlan show profile
+3) netsh wlan show profiles PROFILENAME key=clear
+4) netsh interface ipv6 show address
+5) netsh interface ipv6 show interface
+6) netsh interface ipv6 show route
+7) netsh interface ipv4 show address
+8) netsh interface ipv4 show interface
+9) netsh interface ipv4 show route
+10) netsh interface ip show config
+11) netsh advfirewall firewall show rule
+12) netsh winsock show catalog
+13) netsh int ip show addresses
+14) netsh>
+help
+
+5 mins:
+
+Navigate 
+www.nslookup.io    Tools
+10 mins:
+www.dnsstuff.com   - Free tools
+
+5 mins: 
+Slides Review

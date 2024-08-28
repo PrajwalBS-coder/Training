@@ -1,0 +1,18 @@
+STEP1:-  install AD domain service from your server-manager console 
+step2:-  join client or memberserver to AD from workgroup model to domain model by click on mycomputer properties and change to
+          workgroup model to domain model
+
+step 3:- add user on active directory user and computers icon which is automatically created when you installed ad
+
+step4:-  after creating domain user change default password policy
+         ---->login as an administrator to you domain controller-> click on group policy management-> expand->domain->forest
+              ->find you domain(mydomain.com)-> click and default domain policy and edit it-> expand computer configurations
+              -> windows settings-> security settings-> windows security setting -> under account policy find password policy
+
+
+step5:-  after changing the policy; open cmd and run a command (gpupdate)
+
+
+*** for user to login to your DC change existing default domain-crontroller policy using group policy management console.
+
+O.U ->  acts like a group; you can add multiple users in a single o.u

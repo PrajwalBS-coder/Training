@@ -1,0 +1,146 @@
+macchanger
+──(prajwal㉿kali)-[~/Desktop]
+└─$ getmac
+getmac: command not found
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -s
+GNU MAC Changer
+Usage: macchanger [options] device
+
+Try `macchanger --help' for more options.
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger --help
+GNU MAC Changer
+Usage: macchanger [options] device
+
+  -h,  --help                   Print this help
+  -V,  --version                Print version and exit
+  -s,  --show                   Print the MAC address and exit
+  -e,  --ending                 Don't change the vendor bytes
+  -a,  --another                Set random vendor MAC of the same kind
+  -A                            Set random vendor MAC of any kind
+  -p,  --permanent              Reset to original, permanent hardware MAC
+  -r,  --random                 Set fully random MAC
+  -l,  --list[=keyword]         Print known vendors
+  -b,  --bia                    Pretend to be a burned-in-address
+  -m,  --mac=XX:XX:XX:XX:XX:XX
+       --mac XX:XX:XX:XX:XX:XX  Set the MAC XX:XX:XX:XX:XX:XX
+
+Report bugs to https://github.com/alobbs/macchanger/issues
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -s    
+GNU MAC Changer
+Usage: macchanger [options] device
+
+Try `macchanger --help' for more options.
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -S
+macchanger: invalid option -- 'S'
+GNU MAC Changer
+Usage: macchanger [options] device
+
+  -h,  --help                   Print this help
+  -V,  --version                Print version and exit
+  -s,  --show                   Print the MAC address and exit
+  -e,  --ending                 Don't change the vendor bytes
+  -a,  --another                Set random vendor MAC of the same kind
+  -A                            Set random vendor MAC of any kind
+  -p,  --permanent              Reset to original, permanent hardware MAC
+  -r,  --random                 Set fully random MAC
+  -l,  --list[=keyword]         Print known vendors
+  -b,  --bia                    Pretend to be a burned-in-address
+  -m,  --mac=XX:XX:XX:XX:XX:XX
+       --mac XX:XX:XX:XX:XX:XX  Set the MAC XX:XX:XX:XX:XX:XX
+
+Report bugs to https://github.com/alobbs/macchanger/issues
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ ifconfig     
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:fe13:9bf4  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:13:9b:f4  txqueuelen 1000  (Ethernet)
+        RX packets 1  bytes 590 (590.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 26  bytes 3282 (3.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 4  bytes 240 (240.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4  bytes 240 (240.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -s eth0
+Current MAC:   08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -s lo  
+Current MAC:   00:00:00:00:00:00 (XEROX CORPORATION)
+Permanent MAC: 00:00:00:00:00:00 (XEROX CORPORATION)
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -a eth0
+Current MAC:   08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+[ERROR] Could not change MAC: interface up or insufficient permissions: Operation not permitted
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ sudo macchanger -a eth0
+[sudo] password for prajwal: 
+Sorry, try again.
+[sudo] password for prajwal: 
+Current MAC:   08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+New MAC:       b0:50:bc:5e:8a:d0 (SHENZHEN BASICOM ELECTRONIC CO.,LTD.)
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -a eth0     
+Current MAC:   b0:50:bc:5e:8a:d0 (SHENZHEN BASICOM ELECTRONIC CO.,LTD.)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+[ERROR] Could not change MAC: interface up or insufficient permissions: Operation not permitted
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -s eth0     
+Current MAC:   b0:50:bc:5e:8a:d0 (SHENZHEN BASICOM ELECTRONIC CO.,LTD.)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ macchanger -r eth0
+Current MAC:   b0:50:bc:5e:8a:d0 (SHENZHEN BASICOM ELECTRONIC CO.,LTD.)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+[ERROR] Could not change MAC: interface up or insufficient permissions: Operation not permitted
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ sudo macchanger -r eth0
+Current MAC:   b0:50:bc:5e:8a:d0 (SHENZHEN BASICOM ELECTRONIC CO.,LTD.)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+New MAC:       ae:b4:64:b9:01:f3 (unknown)
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$  macchanger -s eth0  
+Current MAC:   ae:b4:64:b9:01:f3 (unknown)
+Permanent MAC: 08:00:27:13:9b:f4 (CADMUS COMPUTER SYSTEMS)
+                                                                            
+┌──(prajwal㉿kali)-[~/Desktop]
+└─$ 
+
+
+zphisher 
+
+
+
+https://github.com/htr-tech/zphisher
+
+
+crunch 2 4 ase4554

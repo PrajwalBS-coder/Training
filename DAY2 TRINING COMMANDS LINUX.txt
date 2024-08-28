@@ -1,0 +1,52 @@
+ who
+	# w
+	# whoami
+	# ls -l
+	# ll
+	# alias cls=clear
+	# cls
+	# touch aptech1 aptech2 aptech3
+	# echo " Welcome to the world of Linux"
+	# cat aptech1 ---> this will display the content of aptech1
+
+	# cat > aptech4 ---> this 
+	   My name is ????
+           I am learning linux
+           Press ctl+z to save
+	# cat aptech4
+	# cat >> aptech5 --> this will append a line to aptech5
+	# cp aptech1 unique1
+	# mv aptech2 unique2
+        # useradd henry
+	# useradd tom
+	# useradd peter
+	# passwd henry
+	# passwd tom
+	# passwd peter
+        # mkdir data
+	# cd data
+	# cd ..
+	# cp aptech1 /root/data
+	# mv unique2 /root/data
+	# ls -l /root/data
+	# cp aptech1 /home/peter
+	# cp unique2 /home/tom
+	# mv aptech4 /home/henry
+	# rm aptech1
+	# ls -l
+	# rm -f aptech3
+	# rmdir data
+	# rm -r data
+	# mkdir music
+ 	# mkdir movie
+	# mkdir songs
+	# rmdir movie
+        # ls -l
+	# pwd
+Creat the following  file using gedit editor and type the contents and perform following action
+	
+
+	# gedit happy
+	
+		File permission specifies who has the access to file what type of access the user has. On a linux sytem, There is typically more than one user that provides a mechanism known as file permissions. Which protect user files from accessing by other user.
+

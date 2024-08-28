@@ -1,0 +1,90 @@
+WMIC USES
+
+E:\ex>wmic
+wmic:root\cli>exit
+
+E:\ex>wmic context
+NAMESPACE             : root\cimv2
+ROLE                  : root\cli
+NODE(S)               : DESKTOP-OUC8S5A
+IMPLEVEL              : IMPERSONATE
+[AUTHORITY            : N/A]
+AUTHLEVEL             : PKTPRIVACY
+LOCALE                : ms_409
+PRIVILEGES            : ENABLE
+TRACE                 : OFF
+RECORD                : N/A
+INTERACTIVE           : OFF
+FAILFAST              : OFF
+OUTPUT                : STDOUT
+APPEND                : STDOUT
+USER                  : N/A
+AGGREGATE             : ON
+
+
+E:\ex>wmic bios get serialnumber
+SerialNumber
+CND93313FT
+
+
+
+E:\ex>wmic product get name
+Name
+Python 3.9.7 Executables (64-bit)
+Python 3.9.7 pip Bootstrap (64-bit)
+Python 3.9.7 Development Libraries (64-bit)
+Python 3.9.7 Documentation (64-bit)
+Python 3.9.7 Core Interpreter (64-bit)
+Python 3.9.7 Utility Scripts (64-bit)
+Python 3.9.7 Tcl/Tk Support (64-bit)
+Python 3.9.7 Test Suite (64-bit)
+Python 3.9.7 Standard Library (64-bit)
+Office 16 Click-to-Run Extensibility Component
+Office 16 Click-to-Run Localization Component
+Office 16 Click-to-Run Extensibility Component 64-bit Registration
+Office 16 Click-to-Run Licensing Component
+Microsoft Visual C++ 2022 X86 Additional Runtime - 14.32.31326
+MySQL Connector J
+MySQL Workbench 8.0 CE
+Update for Windows 10 for x64-based Systems (KB5001716)
+Microsoft Update Health Tools
+VMware Player
+Python Launcher
+MySQL Server 8.0
+Java 8 Update 181 (64-bit)
+AMD WVR64
+Go Programming Language amd64 go1.20
+Microsoft Visual C++ 2022 X64 Additional Runtime - 14.32.31326
+MySQL Connector/ODBC 8.0
+Oracle VM VirtualBox 6.1.38
+Microsoft Power BI Desktop (x64)
+Windows PC Health Check
+MySQL Router 8.0
+
+MySQL Connector Net 8.0.26
+Google Update Helper
+MySQL Examples and Samples 8.0
+MySQL Documents 8.0
+Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.32.31326
+MySQL Connector Python v8.0.26
+MySQL Connector C++ 8.0
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.30319
+AMD Settings
+MySQL Installer for Windows - Community
+MySQL Shell 8.0.26
+Java Auto Updater
+Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.32.31326
+
+
+E:\ex>wmic cpu get numberofcores
+NumberOfCores
+2
+
+E:\ex>wmic bios get version
+Version
+HPQOEM - 1
+
+E:\ex>wmic csproduct get name
+Name
+HP Laptop 15q-dy0xxx
+

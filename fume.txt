@@ -1,0 +1,2 @@
+flume-ng agent --name a1 --conf-file /home/cloudera/Desktop/flume_demo/exmple.conf
+

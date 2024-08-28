@@ -1,0 +1,24 @@
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+zookeper
+
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+server
+
+.\bin\windows\kafka-topics.bat --create --topic natxis --bootstrap-server localhost:9092
+create topic
+
+.\bin\windows\kafka-console-producer.bat --topic natxis --bootstrap-server localhost:9092
+to add data
+
+.\bin\windows\kafka-console-consumer.bat --topic natxis --bootstrap-server localhost:9092
+
+to see the data
+>.\bin\windows\kafka-console-consumer.bat --topic natxis --from-beginning --bootstrap-server localhost:9092
+
+
+
+.\bin\windows\kafka-console-consumer.bat --topic natxis-example --from-beginning --bootstrap-server localhost:9092
+

@@ -1,0 +1,12 @@
+setfacl -m u:test1:rwx file1
+getfacl file1
+setfacl -x u:test1 file1
+
+useradd -g 1234 g1
+
+mv file3 file2 /opt
+mv file3 file2 /home
+
+
+
+
